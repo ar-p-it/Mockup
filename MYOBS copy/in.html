@@ -1,0 +1,174 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #videosections {
+  height: 140vw;
+  width: 100%;
+  background-color: #ffa63d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4vw;
+}
+#videosections #v1play {
+  height: 100%;
+  width: 32%;
+  background-color: black;
+  position: relative;
+}
+
+#videosections #v1play video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+    </style>
+</head>
+<body>
+    <div id="loader">
+        <div id="videosections">
+            <div class="v1play">
+                <video autoplay loop muted src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+            </div>
+            <div class="v1play">
+                <video autoplay loop muted src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+            </div>
+            <div class="v1play">
+                <video autoplay loop muted src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+            </div>
+
+        </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Grid Layout</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: black;
+      }
+
+      #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-rows: 1fr 1.5fr 1fr;
+        gap: 2px;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .gallery-item {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .gallery-item video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-item:hover video {
+        transform: scale(1.05);
+      }
+
+      .center-item {
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+      }
+
+      .center-item video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .center-text {
+        position: absolute;
+        z-index: 3;
+        color: white;
+        width: 100%;
+        padding: 0 20px;
+      }
+
+      .center-text h1 {
+        font-size: 4vw;
+        font-weight: 200;
+        letter-spacing: 4px;
+        line-height: 1.2;
+        text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gallery">
+      <!-- Top Row -->
+      <div class="gallery-item">
+        <video autoplay loop muted playsinline src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+      </div>
+      <div class="gallery-item">
+        <video autoplay loop muted playsinline src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+      </div>
+      <div class="gallery-item">
+        <video autoplay loop muted playsinline src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+      </div>
+
+      <!-- Middle Row -->
+      <div class="gallery-item">
+        <video autoplay loop muted playsinline src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+      </div>
+      <div class="center-item">
+        <div class="overlay"></div>
+        <div class="center-text">
+            <h1>CAPTURE YOUR<br>IMAGINATION</h1>
+        </div>
+        <video autoplay loop muted playsinline src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+      </div>
+      <div class="gallery-item">
+        <video autoplay loop muted playsinline src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="gallery-item">
+        <video autoplay loop muted playsinline src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+      </div>
+      <div class="gallery-item">
+        <video autoplay loop muted playsinline src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+      </div>
+      <div class="gallery-item">
+        <video autoplay loop muted playsinline src="Video/WhatsApp-Video-2024-04-22-at-3.40.58-PM.mp4"></video>
+      </div>
+    </div>
+  </body>
+</html>
